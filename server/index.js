@@ -60,6 +60,8 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
 })
 .then(() => {
+  console.log('MongoDB URL:', process.env.MONGO_URL);
+
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     // ADD DATA ONE TIME 
